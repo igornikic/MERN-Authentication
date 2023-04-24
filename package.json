@@ -1,0 +1,25 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "Custom authentication with feauters: Register, Login, Forgot Password, Reset Password, Logout ... ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "NODE_ENV=PRODUCTION& nodemon backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Nikic",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.0.3",
+    "nodemailer": "^6.9.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
