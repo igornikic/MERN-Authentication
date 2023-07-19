@@ -110,7 +110,7 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
   }
 
   if (req.body.password !== req.body.confirmPassword) {
-    return next(new ErrorHandler("Password does not match", 400));
+    return next(new ErrorHandler("Passwords do not match", 400));
   }
 
   // Setup new password
@@ -147,7 +147,7 @@ exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
   // Verify new password
   if (req.body.password !== req.body.confirmPassword) {
     return next(
-      new ErrorHandler("Password & Confirm Password does not match.", 400)
+      new ErrorHandler("Password & Confirm Password do not match.", 400)
     );
   }
 
@@ -210,7 +210,7 @@ exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
 
   if (!user) {
     return next(
-      new ErrorHandler(`User does not found with id: ${req.params.id}`)
+      new ErrorHandler(`User is not found with id: ${req.params.id}`)
     );
   }
 
@@ -247,7 +247,7 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
 
   if (!user) {
     return next(
-      new ErrorHandler(`User does not found with id: ${req.params.id}`)
+      new ErrorHandler(`User is not found with id: ${req.params.id}`)
     );
   }
 
